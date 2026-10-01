@@ -1,14 +1,16 @@
 # MiaoBaGua
 
-<img src="public/assets/miaobagua-logo.png" alt="MiaoBaGua 抱筒三花小猫 logo" width="160" />
+<img src="public/assets/miaobagua-logo.png" alt="MiaoBaGua 三花猫举筒正式 Logo" width="160" />
+
+正式 Logo：三花猫举筒。
 
 Windows 直播组件应用：三花小猫抱盅摇卦，三枚骰子同步运动，停稳后显示上下排列的自然图案。主播在私人控制台操作、查看结果和历史；两个独立直播窗口只显示图案与动画。
 
-当前版本：**1.2.12**。
+当前版本：**1.2.13**。
 
 ## 使用
 
-双击 `MiaoBaGua-1.2.12-Windows.exe`，无需安装 Node.js。开发构建的便携程序输出到 `release/`。
+双击 `MiaoBaGua-1.2.13-Windows.exe`，无需安装 Node.js。开发构建的便携程序输出到 `release/`。
 
 在直播伴侣中分别添加“窗口捕获”：
 
@@ -60,7 +62,7 @@ npm run icons       # 从选定 logo 重新导出程序图标
 npm run package     # 构建 Windows x64 便携程序
 ```
 
-便携程序输出为 `release/MiaoBaGua-1.2.12-Windows.exe`。打包复用项目安装的 Electron 二进制。
+便携程序输出为 `release/MiaoBaGua-1.2.13-Windows.exe`。打包复用项目安装的 Electron 二进制。
 
 ## 验证
 

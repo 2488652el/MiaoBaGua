@@ -1,13 +1,15 @@
-# MiaoBaGua · A 抱筒小猫
+# MiaoBaGua · 正式 Logo
 
-用户选择 A 方向单张 logo：以现有三花摇卦猫为原型，保留三花脸与双爪抱筒，简化为小尺寸可辨认的图形。
+2026-10-01，用户选定 A6「猫猫举筒」为正式软件 logo：三花猫用双爪把开口筒举到脸前，保留陶橙背景、奶油色脸与炭黑花色。正式原图位于 [public/assets/miaobagua-logo.png](../../public/assets/miaobagua-logo.png)，完整生成提示词位于 [MiaoBaGua-logo.prompt.txt](MiaoBaGua-logo.prompt.txt)。
+
+用户提供的选定图片与项目中的 A6 原图 SHA-256 完全一致：`443c7a9fee72bf90f2333aafdfca5ae2e22d5534d64bfdfa995b13333a83522c`。正式图保留 1254 × 1254 原生尺寸及所有像素，未裁切、重绘或调整颜色。以下 A1 素材为早期设计记录。
 
 ## 输出与来源
 
 | 标识 | 文件 | 尺寸 | 背景 | 用途 |
 | --- | --- | --- | --- | --- |
 | A1 初稿 | [A1-draft.png](A1-draft.png) | 1254 × 1254 | 不透明陶橙 | 保留生成初稿，不推荐作为严格精简版 |
-| A1 精简版 | [A1-logo.png](A1-logo.png) | 1254 × 1254 | 不透明陶橙 | 当前程序品牌图；进行了一次针对性精简 |
+| A1 精简版 | [A1-logo.png](A1-logo.png) | 1254 × 1254 | 不透明陶橙 | 早期品牌候选；进行了一次针对性精简 |
 | A1 小尺寸预览 | [A1-preview-32.png](A1-preview-32.png) | 32 × 32 | 不透明陶橙 | 从精简版缩小，检查识别度 |
 
 使用内置 `image_gen.imagegen`；工具未暴露底层模型名称。约束以 `main-prompt constraints` 方式写在主提示词。完整提示词分别保存在 [初稿提示词](A1-draft.prompt.txt) 与 [精简提示词](A1-logo.prompt.txt)。未更改生成原图的像素、背景或原生尺寸。
@@ -22,4 +24,4 @@
 - 精简版仍有轻微表面纹理、奶油色区域明暗以及略尖的额头色块切口。严格技能约束未全部通过，不能视为已通过全部量化要求的成品；本次不通过代码静默修补这些差异。
 - 原图均为不透明 RGB，保留原生 1254 像素尺寸；没有为了达到请求的 1536 像素而重采样。
 
-程序引用 `public/assets/miaobagua-logo.png`，其内容与 `A1-logo.png` 完全一致。`npm run icons` 从该原图导出 256 像素 PNG 和含 16 / 24 / 32 / 48 / 64 / 128 / 256 像素帧的 Windows ICO；这些是用途明确的图标导出，原图保持不变。
+程序和主 README 均引用 `public/assets/miaobagua-logo.png`，当前内容为用户选定的 A6 原图。`npm run icons` 从该原图导出 256 像素 PNG 和含 16 / 24 / 32 / 48 / 64 / 128 / 256 像素帧的 Windows ICO；这些是用途明确的图标导出，原图保持不变。
