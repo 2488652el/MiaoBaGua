@@ -1,0 +1,18 @@
+Asset: public/assets/cat/calico-articulated-parts-v2.png
+Generated with: built-in ImageGen, transparent_background=true
+Reference: public/assets/cat/calico-handpainted-v1.png
+
+Use case: illustration-story / animation production assets.
+Input image 1 is the EXACT character identity, gouache-and-pencil style reference. Preserve this cream calico kitten's orange and charcoal patch colors, amber eyes, coral neckerchief, bamboo cup and warm handmade paper texture. Create ONE professional transparent sprite-parts atlas for a 2D articulated animation. This is NOT a pose sheet.
+Canvas 2048x1024, exactly FOUR equal 512x512 columns by TWO equal 512x512 rows, no visible grid, no labels, no text, no shadows, actual alpha background. Every part centered in its own cell with generous empty margins, parts MUST NOT touch neighboring cells. Each cell contains exactly one isolated painted component, not a full character except specified torso. Use most of its cell for crisp detail. Same gentle organic anatomy as reference.
+Top row left to right:
+1. The kitten's seated TORSO AND TWO HIND LEGS/FEET only. From a softly rounded neck stump down to both grounded toes, fluffy pear-shaped body, complete cream belly and calico flank patches. NO head, NO scarf, NO tail, NO front arms or front paws, NO cup. Paint the entire belly previously hidden by cup/arms so arm motion can uncover it.
+2. Complete HEAD WITH BOTH EARS AND CORAL NECKERCHIEF, same friendly amber eyes, pink nose, soft smile and whiskers as reference. Entire ears to scarf tips. NO torso or front limbs. Face shape and markings match reference.
+3. ONE bamboo CUP HELD BY TWO SMALL CREAM PAWS: cup upright, a small furry paw curls around each side. Tiny rounded fingers wrap cup, visible cup rim and bottom. NO forearms extending away, NO body. This component will stay rigid while arms attach behind the two paws. The left paw may have a small orange patch at its outer wrist. Bamboo cup has natural warm brown hand-drawn outline.
+4. Complete curved CALICO TAIL ONLY, cream/orange/charcoal, same upward curl as reference. Thick softly rounded root at lower right, raised tip at upper left.
+Bottom row left to right:
+5. NEAR UPPER FRONT ARM ONLY, elongated soft furry upper arm, vertical orientation, shoulder rounded at TOP, elbow rounded at BOTTOM, charcoal and orange shoulder patch fading to CREAM at elbow. No hand or fingers. Organic taper, not a cylinder, not a ball joint. Slight organic contour, continuous hand-painted texture.
+6. NEAR FOREARM ONLY, vertical orientation, rounded elbow at TOP, narrower rounded wrist at BOTTOM, mostly CREAM with small orange patch on outer side. No hand or fingers. Ends cream so they blend under upper arm and paw. No elbow crease crossing the entire part.
+7. FAR UPPER FRONT ARM ONLY, vertical shoulder TOP to rounded elbow BOTTOM, mostly cream with subtle charcoal patch near shoulder. No hand/fingers. Same scale and painterly edges as cell 5.
+8. FAR FOREARM ONLY, vertical rounded elbow TOP to narrow rounded wrist BOTTOM, cream fur, same scale as cell 6, no hand/fingers.
+All cut edges at articulation points are soft rounded fur caps for overlap. NO black mechanical outlines, NO visible sockets, NO geometric robot limbs, NO detached circular joint balls. This is a beautifully painted asset kit to reconstruct the reference kitten with actual articulated shoulders, elbows and wrists. Do not create poses, duplicates, any full assembled cat, or any background.

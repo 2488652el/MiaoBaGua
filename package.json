@@ -1,0 +1,78 @@
+{
+  "name": "miaobagua",
+  "productName": "MiaoBaGua",
+  "description": "自然主题骰子、随机灵感直播组件与本地主播控制台",
+  "author": "Miaovis",
+  "main": "electron/main.js",
+  "private": true,
+  "version": "1.2.12",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "icons": "node scripts/create-icons.cjs",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "test:desktop": "npm run build && node tests/desktop.e2e.cjs",
+    "start": "npm run build && electron .",
+    "package": "npm run build && electron-builder --win portable --x64 --publish never --config.electronDist=node_modules/electron/dist",
+    "package:dir": "npm run build && electron-builder --win --dir --x64",
+    "test:broadcast": "npm run build && node tests/broadcast.e2e.cjs",
+    "test:deepseek": "npm run build && node tests/deepseek.e2e.cjs",
+    "test:input": "npm run build && node tests/input.e2e.cjs",
+    "test:body-use": "npm run build && node tests/body-use.e2e.cjs",
+    "test:reveal": "npm run build && node tests/reveal.e2e.cjs",
+    "test:cat": "npm run build && node tests/cat.e2e.cjs",
+    "test:cat-rendering": "npm run build && node tests/cat-rendering.e2e.cjs",
+    "test:cat-fluency": "npm run build && node tests/cat-fluency.e2e.cjs",
+    "test:cat-idle": "npm run build && node tests/cat-idle.e2e.cjs"
+  },
+  "devDependencies": {
+    "@fontsource/noto-serif-sc": "^5.3.0",
+    "@playwright/test": "1.63.0",
+    "@vitejs/plugin-react": "^5.0.3",
+    "cannon-es": "^0.20.0",
+    "electron": "44.4.5",
+    "electron-builder": "26.15.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sharp": "^0.35.5",
+    "three": "^0.186.1",
+    "vite": "^7.1.7"
+  },
+  "build": {
+    "appId": "com.miaovis.cyber-oracle",
+    "productName": "MiaoBaGua",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "src/oracle.js",
+      "src/readings.js",
+      "src/state.js",
+      "src/motion-timing.js",
+      "package.json",
+      "src/broadcast.js",
+      "src/ai-record.js"
+    ],
+    "extraFiles": [
+      {
+        "from": "使用说明.md",
+        "to": "使用说明.md"
+      }
+    ],
+    "win": {
+      "icon": "public/assets/app-icon.ico",
+      "target": [
+        "portable"
+      ],
+      "signAndEditExecutable": false
+    },
+    "portable": {
+      "artifactName": "MiaoBaGua-${version}-Windows.exe"
+    }
+  }
+}

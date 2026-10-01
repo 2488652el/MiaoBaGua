@@ -1,0 +1,24 @@
+node_modules/
+dist/
+release/
+test-results/
+*.log
+.DS_Store
+
+# Local tools, old builds, and generated acceptance artifacts
+.mimosa/
+archive/
+验收截图/
+docs/审查/
+docs/历史记录/*.backup
+playwright-report/
+coverage/
+
+# Local configuration and persisted questions / API credentials
+.env
+.env.*
+!.env.example
+oracle-state.json
+deepseek-settings.json
+*.pem
+*.key

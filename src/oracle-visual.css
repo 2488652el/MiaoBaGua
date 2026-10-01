@@ -1,0 +1,127 @@
+/* Broadcast card: crisp ink on warm paper with a short drawn reveal. */
+.oracle-card {
+  background: #f9e8ad;
+  border-color: #a9381d;
+  box-shadow: inset 0 0 0 2px #f8d683, 0 5px 14px #58351f47;
+}
+
+.card-frame {
+  opacity: .5;
+  mix-blend-mode: multiply;
+}
+
+.card-lines {
+  color: #392923;
+  filter: none;
+  animation: none;
+}
+
+.card-lines [data-line] {
+  fill: currentColor;
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: ink-stroke .24s cubic-bezier(.2,.75,.3,1) both;
+}
+.card-lines [data-line="1"] { animation-delay: 0s; }
+.card-lines [data-line="2"] { animation-delay: .03s; }
+.card-lines [data-line="3"] { animation-delay: .06s; }
+.card-lines [data-line="4"] { animation-delay: .09s; }
+.card-lines [data-line="5"] { animation-delay: .12s; }
+.card-lines [data-line="6"] { animation-delay: .15s; }
+.card-lines .moving-line { fill: #aa3d27; }
+.result-tile svg [data-line] { fill: #253031; }
+.result-tile svg .moving-line { fill: #aa3d27; }
+@keyframes ink-stroke {
+  from { opacity: .55; transform: scaleX(.68); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+.card-name,
+.oracle-card .card-name {
+  color: #a9381d;
+  text-shadow: 1px 2px 0 #efbf75, 2px 3px 3px #74402955;
+  -webkit-text-stroke: 0;
+  filter: none;
+  animation: name-stamp .38s cubic-bezier(.19,.89,.32,1.1) both;
+  animation-delay: 0s;
+}
+@keyframes name-stamp {
+  from { opacity: .72; transform: translateY(5%) scale(1.04); }
+  75% { opacity: 1; transform: translateY(-1%) scale(.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.card-roll-status {
+  position: absolute; display: grid; place-items: center; width: 100%;
+  color: #a9381d; font: 900 7.5cqw var(--font-serif);
+  top: 82%; height: 10%; letter-spacing: .16em;
+}
+.card-frame { transition: opacity .5s ease; }
+.oracle-card.is-rolling[data-transition="throwing"] .card-frame { opacity: .36; }
+.dice-scene.dice-3d {
+  position: absolute; inset: 5% 4% 22%; display: block; pointer-events: none; visibility: hidden; opacity: 0;
+}
+.dice-scene.is-active { visibility: visible; opacity: 1; }
+.dice-canvas { display: block; width: 100%; height: 100%; }
+.dice-caption {
+  position: absolute; top: 90%; width: max-content; margin: 0; transform: translate(-50%, 0);
+  opacity: 0; transition: none;
+}
+.dice-3d[data-motion-phase="stopped"] .dice-caption { opacity: 1; transition: opacity .18s ease; }
+.dice-caption:nth-of-type(1) { left: 20%; }
+.dice-caption:nth-of-type(2) { left: 50%; }
+.dice-caption:nth-of-type(3) { left: 80%; }
+.die-label {
+  display: flex; align-items: center; gap: 1cqw; white-space: nowrap;
+  padding: .6cqw 1.5cqw; border-radius: .8cqw; background: #faeab4d9;
+  color: #76573b; font-size: clamp(8px, 2.5cqw, 18px); font-weight: 600; line-height: 1.4;
+}
+.die-label b { color: #6f3926; font: 900 clamp(10px, 3.1cqw, 24px) var(--font-serif); }
+.dice-caption:nth-of-type(2) .die-label b { color: #315f50; }
+.dice-fallback { position: absolute; inset: 30% 0; text-align: center; color: #8f3925; font: 900 9cqw var(--font-serif); }
+.dice-fallback small { display: block; font: 3cqw var(--font-serif); margin-top: 3cqw; }
+@media (prefers-reduced-motion: reduce) {
+  .oracle-card .card-name, .card-lines [data-line] { animation: none !important; }
+  .dice-caption { transition: none; }
+}
+
+/* Public inspiration card: warm printed illustration and a short conversation title. */
+.card-result { position: absolute; inset: 0; pointer-events: none; }
+.oracle-card.is-rolling .card-result { opacity: 0; }
+.result-ticket {
+  position: absolute; inset: 6% 11% 11%; transform-origin: 50% 72%;
+  filter: drop-shadow(0 1.8cqw 1.5cqw #75482236) drop-shadow(0 .25cqw .12cqw #77513626);
+}
+.result-paper-art { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.result-seal {
+  position: absolute; right: 9%; bottom: 8.5%; width: 6cqw; height: 6cqw;
+  display: grid; place-items: center; border: .32cqw solid #a95035; outline: .12cqw solid #a95035;
+  outline-offset: -.8cqw; color: #a95035; font: 900 3.6cqw var(--font-serif);
+  transform: rotate(-7deg); opacity: .85;
+}
+.card-kicker {
+  position: absolute; top: 8.1%; left: 0; width: 100%; text-align: center;
+  color: #835b3e; font: 700 3cqw var(--font-serif); letter-spacing: .28em;
+}
+.nature-illustration { position: absolute; top: 16%; left: 3%; width: 94%; height: 67%; }
+.nature-illustration svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.nature-character { font: 900 58px var(--font-serif); text-anchor: middle; }
+.nature-position { font: 700 14px var(--font-serif); text-anchor: middle; }
+.card-correspondence { position: absolute; top: 65.5%; left: 0; width: 100%; text-align: center; color: #815c3c; font: 700 3cqw var(--font-serif); letter-spacing: .12em; }
+.inspiration-card .card-result .card-name {
+  top: 71.5%; height: 13%; font-size: 9.6cqw; letter-spacing: .06em;
+  text-shadow: 0 1px 0 #f5d697;
+  animation: none; opacity: 1;
+}
+.card-footnote {
+  position: absolute; top: 91%; left: 0; width: 100%; text-align: center;
+  color: #816043; font: 600 clamp(8px,2.2cqw,18px) var(--font-serif); letter-spacing: .12em;
+}
+.nature-symbol path { stroke-dasharray: 1; stroke-dashoffset: 0; }
+.nature-paper { transform-box: fill-box; transform-origin: center; }
+.dice-scene.has-fallback .dice-canvas, .dice-scene.has-fallback .dice-caption { visibility: hidden; }
+.dice-fallback { inset: 30% 7% auto; display: flex; gap: 4%; align-items: center; justify-content: center; }
+.dice-fallback svg { width: 29%; height: auto; filter: drop-shadow(0 1cqw .5cqw #513a292f); }
+.live-prompt { margin: 12px 0 16px; padding: 13px 15px; border: 1px solid #c5c7a9; border-radius: 10px; background: #f3f2e4; }
+.live-prompt span { display: block; color: #648273; font-size: 11px; letter-spacing: .08em; }
+.live-prompt strong { display: block; margin: 7px 0; color: #365d50; font: 900 17px var(--font-serif); }
+.live-prompt p { margin: 0; color: #675b47; font-size: 13px; line-height: 1.6; }
