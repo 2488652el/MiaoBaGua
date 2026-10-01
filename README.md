@@ -1,5 +1,7 @@
 # MiaoBaGua
 
+<img src="public/assets/miaobagua-logo.png" alt="MiaoBaGua 抱筒三花小猫 logo" width="160" />
+
 Windows 直播组件应用：三花小猫抱盅摇卦，三枚骰子同步运动，停稳后显示上下排列的自然图案。主播在私人控制台操作、查看结果和历史；两个独立直播窗口只显示图案与动画。
 
 当前版本：**1.2.12**。

@@ -72,7 +72,7 @@ function Studio({ state, act, error }) {
   },[act,snapshot,isComposing]);
   useEffect(()=>bridge.onRollRequested(roll),[roll]);
   return <div className="studio-shell">
-    <header className="app-header"><div className="brand"><span className="brand-seal">卦</span><div><h1>MiaoBaGua</h1><span>主播控制台 · v{APP_VERSION}</span></div></div><div className="header-actions"><button className="quiet-button deepseek-entry" onClick={()=>setAiSettings(true)}>DeepSeek <span>{state.aiConfig?.configured?'已配置':'未配置'}</span></button><button className="quiet-button" onClick={() => setGuide(true)}><Icon name="info"/>使用说明</button></div></header>
+    <header className="app-header"><div className="brand"><img className="brand-seal" src="/assets/miaobagua-logo.png" alt="MiaoBaGua 抱筒三花小猫" width="50" height="50"/><div><h1>MiaoBaGua</h1><span>主播控制台 · v{APP_VERSION}</span></div></div><div className="header-actions"><button className="quiet-button deepseek-entry" onClick={()=>setAiSettings(true)}>DeepSeek <span>{state.aiConfig?.configured?'已配置':'未配置'}</span></button><button className="quiet-button" onClick={() => setGuide(true)}><Icon name="info"/>使用说明</button></div></header>
     <div className="studio-body">
       <main className="main-column">
         <nav className="tabs" aria-label="工作区"><button className={tab === 'studio' ? 'active' : ''} onClick={() => { setTab('studio'); setSelectedId(null); }}><Icon name="roll"/>摇卦工作台</button><button className={tab === 'history' ? 'active' : ''} onClick={() => setTab('history')}><Icon name="history"/>卦象记录 <span>{state.history.length}</span></button></nav>

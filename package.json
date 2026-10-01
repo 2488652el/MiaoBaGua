@@ -69,7 +69,7 @@
       "target": [
         "portable"
       ],
-      "signAndEditExecutable": false
+      "signExecutable": false
     },
     "portable": {
       "artifactName": "MiaoBaGua-${version}-Windows.exe"
